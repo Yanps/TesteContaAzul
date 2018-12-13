@@ -1,0 +1,26 @@
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 800px) { 
+    .container {
+        height: auto;
+        padding-top: 80px;
+    }
+
+    .weather-list {
+        flex-direction: column;
+    }
+
+}

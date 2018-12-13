@@ -1,0 +1,28 @@
+<div class="card">
+  <header class="card-header">
+    <h2>{{data.name}}, {{data.sys.country}}</h2>
+  </header>
+
+  <div class="card-content">
+    <h1 [ngClass]="{'cold': getTempClass(data.main.temp) === 'cold',
+                    'hot': getTempClass(data.main.temp) === 'hot',
+                    'normal': getTempClass(data.main.temp) === 'normal'}">
+        {{data.main.temp | number: '0.0-0'}}°</h1>
+  </div>
+
+  <footer class="card-footer">
+    <div class="humidity card-info">
+      <h3 class="label">Humdity</h3>
+      <p class="value">{{data.main.humidity}}<span class="unit">%</span></p>
+    </div>
+    <div class="pressure card-info">
+      <h3 class="label">Pressure</h3>
+      <p class="value">{{data.main.pressure}}<span class="unit">hPa</span></p>
+    </div>
+
+    <div class="last-update">
+      Updated at {{lastUpdate | amLocale:'en' | amDateFormat:'hh:mm:ss a'}}
+    </div>
+  </footer>
+
+</div>
