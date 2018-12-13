@@ -1,4 +1,4 @@
-# InChurchTest
+# Teste Conta Azul
 
 Esse projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 7.1.0.
 É necessário ter a versão do NodeJs >= 6.0.8 na sua máquina local
